@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jimy Cuyago — CV 3D</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+
+  <!-- three.js + GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
+  <!-- OrbitControls for subtle camera movement -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/controls/OrbitControls.js" defer></script>
+
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+
+  <main class="cv-container">
+    <header class="hero">
+      <div class="avatar">
+        <img src="https://avatars.dicebear.com/api/initials/JS.svg" alt="Jimy JS" />
+      </div>
+
+      <div class="hero-info">
+        <h1>JIMY SEBASTIÁN CUYAGO QUILCIMBA</h1>
+        <p class="role">Desarrollador de software · Tecnólogo Superior en Desarrollo de Software</p>
+
+        <div class="contact">
+          <span>📧 <a href="mailto:mvstrsebastian23@gmail.com">mvstrsebastian23@gmail.com</a></span>
+          <span>📱 0980066608</span>
+          <span>📍 Ibarra / Urcuquí, Ecuador</span>
+          <span>🎂 02 Nov 2003</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel objective">
+      <h2>Objetivo profesional</h2>
+      <p>Profesional con experiencia y habilidades en comunicación y desarrollo web y móvil. Manejo de tecnologías como HTML, CSS, JS, PHP, MySQL, Kotlin, Java, Python, WordPress, React, Flutter, Laravel y servicios en la nube.</p>
+    </section>
+
+    <section class="panel columns">
+      <div class="col">
+        <h3>Experiencia</h3>
+        <article class="job">
+          <h4>Levantamiento de información — GAD Imantag</h4>
+          <span class="meta">Mar 2024 — Apr 2024</span>
+          <p>Levantamiento y subida de datos institucionales.</p>
+        </article>
+
+        <article class="job">
+          <h4>Desarrollador — MotosBike</h4>
+          <span class="meta">Feb 2025 — Jul 2025</span>
+          <p>Sistema de inventario y nota de venta.</p>
+        </article>
+
+        <h3>Educación</h3>
+        <ul class="edu">
+          <li><strong>Instituto Superior Tecnológico "17 de Julio"</strong> — Tecnólogo Superior en Desarrollo de Software (Nov 2022 — Ago 2025)</li>
+        </ul>
+      </div>
+
+      <aside class="col side">
+        <h3>Habilidades técnicas</h3>
+        <ul class="skills-grid">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Kotlin</li>
+          <li>Java</li>
+          <li>WordPress</li>
+          <li>Python</li>
+          <li>Linux</li>
+          <li>AWS</li>
+          <li>React</li>
+          <li>Flutter</li>
+          <li>Laravel</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="panel footer-notes">
+      <p>Fondo 3D con íconos oficiales flotando — estilo "Floating Clouds". Si quieres ajustar velocidad, cantidad o añadir interactividad (clic en íconos para abrir docs), lo agrego.</p>
+    </section>
+  </main>
+
+  <footer class="credits">
+    <small>CV interactivo • Fondos 3D con logos oficiales</small>
+  </footer>
+</body>
+</html>
