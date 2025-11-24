@@ -263,3 +263,21 @@ header nav a:hover::after {
         font-size: 24px;
     }
 }
+
+.linea {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #aaa, #000, #aaa);
+    margin: 25px 0;
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
