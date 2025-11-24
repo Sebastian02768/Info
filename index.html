@@ -1,98 +1,212 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jimy Cuyago — CV 3D</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CV Profesional — Estilo Rob Bowen Ultra</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilo.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-  <!-- three.js + GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
 
-  <!-- OrbitControls for subtle camera movement -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/controls/OrbitControls.js" defer></script>
+<link rel="stylesheet" href="estilo.css" />
 
-  <script src="index.js" defer></script>
 </head>
 <body>
-  <canvas id="bg3d" aria-hidden="true"></canvas>
 
-  <main class="cv-container">
-    <header class="hero">
-      <div class="avatar">
-        <img src="https://avatars.dicebear.com/api/initials/JS.svg" alt="Jimy JS" />
-      </div>
+<header>
+    <h1>Mi Portfolio</h1>
 
-      <div class="hero-info">
-        <h1>JIMY SEBASTIÁN CUYAGO QUILCIMBA</h1>
-        <p class="role">Desarrollador de software · Tecnólogo Superior en Desarrollo de Software</p>
+    <nav>
+        <a href="#resumen">Resumen</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#habilidades">Habilidades</a>
+    </nav>
+</header>
 
-        <div class="contact">
-          <span>📧 <a href="mailto:mvstrsebastian23@gmail.com">mvstrsebastian23@gmail.com</a></span>
-          <span>📱 0980066608</span>
-          <span>📍 Ibarra / Urcuquí, Ecuador</span>
-          <span>🎂 02 Nov 2003</span>
+<!-- PANEL IZQUIERDO -->
+<div class="left-panel">
+
+    <div class="profile-pic">
+        <img src="foto/fondo blanco.jpg" alt="Perfil">
+    </div>
+
+    <h2>Contacto</h2>
+    <p><strong>Nombre:</strong> Jimy Sebastian Cuyago Quilcimba</p>
+    <p><strong>Email:</strong> mvstrsebastian23@gmail.com - jimy.cuyago824@ist17dejulio.edu.ec</p>
+    <p><strong>Teléfono:</strong> 09</p>
+
+    <h2>Redes</h2>
+<a class="btn btn-outline-primary" 
+   href="https://www.linkedin.com/in/jimy-sebastian-cuyago-quilcimba-708b69324" 
+   target="_blank" rel="noopener noreferrer">
+   <i class="bi bi-linkedin"></i> LinkedIn
+</a>
+    <a class="btn btn-outline-success" href="#"> <i class="bi bi-whatsapp"></i> WhatsApp</a>
+    <a class="btn btn-outline-info" href="#"> <i class="bi bi-facebook"></i> Facebook</a>
+    <a class="btn btn-outline-secondary" href="#"> <i class="bi bi-telegram"></i> Telegram</a>
+
+    <h2>Perfil</h2>
+    <p>
+        Desarrollador moderno especializado en interfaces limpias, 
+        animaciones GSAP, diseño profesional y páginas tipo Rob Bowen.
+    </p>
+</div>
+
+
+<!-- PANEL DERECHO -->
+<div class="right-panel">
+
+    <!-- RESUMEN -->
+    <div class="section" id="resumen">
+        <h2>Resumen</h2>
+        <p>
+            Profesional del desarrollo frontend con fuerte enfoque en diseño moderno,
+            animaciones avanzadas, UX limpia, estilos minimalistas y estructura profesional.
+        </p>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <div class="section" id="experiencia">
+        <h2>Experiencia</h2>
+
+        <div class="item">
+            <h3>Frontend Developer</h3>
+            <p>
+                Desarrollo completo de interfaces profesionales, diseño UI/UX,
+                optimización responsive y animaciones GSAP.
+            </p>
         </div>
-      </div>
-    </header>
 
-    <section class="panel objective">
-      <h2>Objetivo profesional</h2>
-      <p>Profesional con experiencia y habilidades en comunicación y desarrollo web y móvil. Manejo de tecnologías como HTML, CSS, JS, PHP, MySQL, Kotlin, Java, Python, WordPress, React, Flutter, Laravel y servicios en la nube.</p>
-    </section>
+        <div class="item">
+            <h3>Diseñador Web / UI</h3>
+            <p>
+                Creación de diseños tipo Rob Bowen: limpios, elegantes, minimalistas
+                y altamente profesionales.
+            </p>
+        </div>
 
-    <section class="panel columns">
-      <div class="col">
-        <h3>Experiencia</h3>
-        <article class="job">
-          <h4>Levantamiento de información — GAD Imantag</h4>
-          <span class="meta">Mar 2024 — Apr 2024</span>
-          <p>Levantamiento y subida de datos institucionales.</p>
-        </article>
+    </div>
 
-        <article class="job">
-          <h4>Desarrollador — MotosBike</h4>
-          <span class="meta">Feb 2025 — Jul 2025</span>
-          <p>Sistema de inventario y nota de venta.</p>
-        </article>
+    <!-- HABILIDADES -->
+<!-- HABILIDADES -->
+<div class="section" id="habilidades">
+    <h2>Habilidades</h2>
 
-        <h3>Educación</h3>
-        <ul class="edu">
-          <li><strong>Instituto Superior Tecnológico "17 de Julio"</strong> — Tecnólogo Superior en Desarrollo de Software (Nov 2022 — Ago 2025)</li>
-        </ul>
-      </div>
+    <div class="skills logos">
 
-      <aside class="col side">
-        <h3>Habilidades técnicas</h3>
-        <ul class="skills-grid">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript</li>
-          <li>PHP</li>
-          <li>MySQL</li>
-          <li>Kotlin</li>
-          <li>Java</li>
-          <li>WordPress</li>
-          <li>Python</li>
-          <li>Linux</li>
-          <li>AWS</li>
-          <li>React</li>
-          <li>Flutter</li>
-          <li>Laravel</li>
-        </ul>
-      </aside>
-    </section>
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+            <span>HTML5</span>
+        </div>
 
-    <section class="panel footer-notes">
-      <p>Fondo 3D con íconos oficiales flotando — estilo "Floating Clouds". Si quieres ajustar velocidad, cantidad o añadir interactividad (clic en íconos para abrir docs), lo agrego.</p>
-    </section>
-  </main>
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+            <span>CSS3</span>
+        </div>
 
-  <footer class="credits">
-    <small>CV interactivo • Fondos 3D con logos oficiales</small>
-  </footer>
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+            <span>JavaScript</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg">
+            <span>Bootstrap</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+            <span>PHP</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+            <span>MySQL</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+            <span>Java</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg">
+            <span>Kotlin</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+            <span>Python</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+            <span>React</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg">
+            <span>Flutter</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+            <span>Linux</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+            <span>Figma</span>
+        </div>
+
+        <div class="skill">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+            <span>GitHub</span>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+      // Header animación
+    gsap.from("header", {
+        y: -80,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+    });
+
+    // Panel izquierda
+    gsap.from(".left-panel", {
+        x: -200,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+    });
+
+    // Secciones con ScrollTrigger
+    gsap.utils.toArray(".section").forEach(section => {
+        gsap.to(section, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: section,
+                start: "top 85%"
+            }
+        });
+    });
+</script>
+
+
 </body>
 </html>
