@@ -1,168 +1,146 @@
+/* -------------------------
+   VARIABLES Y BASE
+-------------------------- */
+:root {
+    --white: #ffffff;
+    --gray-light: #f4f4f4;
+    --gray: #dcdcdc;
+    --gray-dark: #8d8d8d;
+    --black: #111111;
+    --accent: #000000;
+}
 
-    :root {
-        --white: #ffffff;
-        --gray-light: #f4f4f4;
-        --gray: #dcdcdc;
-        --gray-dark: #8d8d8d;
-        --black: #111111;
-        --accent: #000000;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Inter", sans-serif;
-        scroll-behavior: smooth;
-    }
+body {
+    background: var(--white);
+}
 
-    body {
-        background: var(--white);
-    }
+/* -------------------------
+   HEADER
+-------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: var(--white);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    z-index: 999;
+}
 
-    /* HEADER */
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 90px;
-        background: var(--white);
-        backdrop-filter: blur(10px);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 40px;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        z-index: 999;
-    }
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--black);
+}
 
-    header h1 {
-        font-size: 26px;
-        font-weight: 700;
-        color: var(--black);
-    }
+header nav a {
+    margin-left: 25px;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    position: relative;
+}
 
-    header nav a {
-        margin-left: 25px;
-        font-size: 15px;
-        text-decoration: none;
-        color: var(--black);
-        font-weight: 500;
-        position: relative;
-    }
+header nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: var(--black);
+    transition: 0.3s;
+}
 
-    header nav a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -3px;
-        left: 0;
-        background: var(--black);
-        transition: 0.3s;
-    }
+header nav a:hover::after {
+    width: 100%;
+}
 
-    header nav a:hover::after {
-        width: 100%;
-    }
+/* -------------------------
+   PANEL IZQUIERDO
+-------------------------- */
+.left-panel {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 30%;
+    height: calc(100vh - 90px);
+    background: var(--gray-light);
+    padding: 40px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
 
-    /* PANEL IZQUIERDO */
-    .left-panel {
-        position: fixed;
-        top: 90px;
-        left: 0;
-        width: 30%;
-        height: calc(100vh - 90px);
-        background: var(--gray-light);
-        padding: 40px;
-        border-right: 1px solid rgba(0,0,0,0.1);
-        overflow-y: auto;
-    }
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
 
-    .profile-pic {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 4px solid #fff;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        margin-bottom: 20px;
-    }
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .profile-pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.left-panel h2 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+    color: var(--black);
+    font-weight: 600;
+}
 
-    .left-panel h2 {
-        font-size: 20px;
-        margin: 15px 0 10px;
-        color: var(--black);
-        font-weight: 600;
-    }
+.left-panel p,
+.left-panel a {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #333;
+    line-height: 1.6;
+}
 
-    .left-panel p,
-    .left-panel a {
-        font-size: 15px;
-        margin-bottom: 8px;
-        color: #333;
-        line-height: 1.6;
-    }
+/* -------------------------
+   PANEL DERECHO
+-------------------------- */
+.right-panel {
+    margin-left: 30%;
+    padding: 120px 70px 60px 70px;
+}
 
-    .social-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 18px;
-        background: var(--gray-light);
-        color: white;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 14px;
-        transition: 0.3s;
-    }
+.section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(40px);
+}
 
-    .social-btn:hover {
-        background: #3333331e;
-        transform: translateY(-3px);
-    }
+.section h2 {
+    font-size: 28px;
+    border-left: 5px solid var(--black);
+    padding-left: 12px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
 
-    /* PANEL DERECHO */
-    .right-panel {
-        margin-left: 30%;
-        padding: 120px 70px 60px 70px;
-    }
-
-    .section {
-        margin-bottom: 60px;
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    .section h2 {
-        font-size: 28px;
-        border-left: 5px solid var(--black);
-        padding-left: 12px;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-
-    .item {
-        margin-bottom: 25px;
-    }
-
-    .item h3 {
-        font-size: 22px;
-        font-weight: 600;
-        color: var(--black);
-    }
-
-    .item p {
-        font-size: 16px;
-        color: #444;
-        line-height: 1.7;
-    }
-
+/* -------------------------
+   HABILIDADES (GRID)
+-------------------------- */
 .skills.logos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -194,4 +172,94 @@
 
 .skill:hover img {
     filter: invert(1);
+}
+
+/* =========================================================
+   📱📱 RESPONSIVE — PANTALLAS MEDIANAS (TABLETS)
+========================================================= */
+@media (max-width: 992px) {
+
+    .left-panel {
+        width: 40%;
+        padding: 30px;
+    }
+
+    .right-panel {
+        margin-left: 40%;
+        padding: 110px 40px;
+    }
+
+    header nav a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   📱📱📱 RESPONSIVE — CELULARES GRANDES
+========================================================= */
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav {
+        display: none; /* Se oculta menú para móviles */
+    }
+
+    .left-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 70px;
+        border-right: none;
+    }
+
+    .right-panel {
+        margin-left: 0;
+        padding: 40px 25px;
+    }
+
+    .skills.logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================================
+   📱📱📱📱 RESPONSIVE — CELULARES PEQUEÑOS
+========================================================= */
+@media (max-width: 480px) {
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+    }
+
+    .left-panel h2 {
+        font-size: 18px;
+    }
+
+    .right-panel {
+        padding: 35px 20px;
+    }
+
+    .skills.logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .skill {
+        padding: 8px 10px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
 }
