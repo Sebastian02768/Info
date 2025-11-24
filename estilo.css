@@ -281,3 +281,7 @@ header nav a:hover::after {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+.texto-small {
+    font-size: 12px !important;
+    line-height: 1.5;
+}
